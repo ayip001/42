@@ -1,0 +1,1 @@
+find . -name \*.c | norminette | awk "NR>4" | sed 's/Norme: ..//g' | tr '\n' '~' | rev | cut -c2- | rev | sed -e $'s/~ex/\\\nex/g' | sort | tr '~' '\n' | sed ''/Error/s//`printf "\033[31mError\033[0m"`/''
