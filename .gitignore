@@ -1,6 +1,9 @@
 # hidden files
 .*
 
+# the test directory
+test/
+
 # Prerequisites
 *.d
 
