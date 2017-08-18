@@ -6,7 +6,7 @@
 /*   By: ayip <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/17 16:47:26 by ayip              #+#    #+#             */
-/*   Updated: 2017/08/17 17:32:32 by ayip             ###   ########.fr       */
+/*   Updated: 2017/08/17 21:22:45 by ayip             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,6 @@ char	*ft_strdup(char *src)
 	len = 0;
 	while (src[len])
 		len++;
-	printf("%d\n", len);
 	dest = (char*)malloc(sizeof(*dest) * (len + 1));
 	return (ft_strcpy(dest, src));
 }
