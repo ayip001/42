@@ -6,7 +6,7 @@
 #    By: ayip <marvin@42.fr>                        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/08/17 15:14:19 by ayip              #+#    #+#              #
-#    Updated: 2017/08/17 16:44:23 by ayip             ###   ########.fr        #
+#    Updated: 2017/08/17 18:10:04 by ayip             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -43,4 +43,4 @@ while getopts ':jn:L:cr:' opt; do
 done
 
 RUN_TAGS=" ./$OUT_NAME "$RUN_TAGS
-gcc $TAGS *c $EXTRA_TAGS && $RUN_TAGS
+gcc $TAGS *c $EXTRA_TAGS && time $RUN_TAGS
