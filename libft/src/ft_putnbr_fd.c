@@ -1,27 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ayip <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/09/18 19:34:21 by ayip              #+#    #+#             */
-/*   Updated: 2017/09/19 15:19:11 by ayip             ###   ########.fr       */
+/*   Created: 2017/09/21 05:14:42 by ayip              #+#    #+#             */
+/*   Updated: 2017/09/21 05:16:33 by ayip             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <unistd.h>
 
-void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
+void	ft_putnbr_fd(int nb, int fd)
 {
-	char		*d;
-	const char	*s;
+	char	c;
 
-	d = dst;
-	s = src;
-	if (d == s)
-		return (dst);
-	while (n-- > 0)
-		*d++ = *s++;
-	return (dst);
+	if (nb == -2147483648)
+	{
+		write(fd, "-2147483648", 11);
+		return ;
+	}
+	if (nb < 0)
+	{
+		write(fd, "-", 1);
+		nb = 0 - nb;
+	}
+	if (nb >= 10)
+		ft_putnbr_fd(nb / 10, fd);
+	c = '0' + nb % 10;
+	write(fd, &c, 1);
 }

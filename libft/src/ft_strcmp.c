@@ -1,26 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ayip <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/09/18 18:57:54 by ayip              #+#    #+#             */
-/*   Updated: 2017/09/18 19:02:03 by ayip             ###   ########.fr       */
+/*   Created: 2017/09/20 00:00:53 by ayip              #+#    #+#             */
+/*   Updated: 2017/09/20 00:38:56 by ayip             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-size_t	ft_strlen(const char *s)
+int		ft_strcmp(const char *s1, const char *s2)
 {
-	int		len;
-
-	len = 0;
-	while (*s)
+	while (42)
 	{
-		len++;
-		s++;
+		if (*s1 != *s2)
+			return (*(unsigned char*)s1 - *(unsigned char*)s2);
+		else if (*s1 == 0)
+			return (0);
+		s1++;
+		s2++;
 	}
-	return (len);
 }
