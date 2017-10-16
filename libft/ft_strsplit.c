@@ -6,7 +6,7 @@
 /*   By: ayip <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/21 00:49:21 by ayip              #+#    #+#             */
-/*   Updated: 2017/09/21 03:19:04 by ayip             ###   ########.fr       */
+/*   Updated: 2017/09/23 16:46:44 by ayip             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ static char		**empty_strarray(void)
 	return (tmp);
 }
 
-char			**filled_strarray(char const *s, int *pos, int numpos)
+static char		**filled_strarray(char const *s, int *pos, int numpos)
 {
 	char	**tmp;
 	int		i;

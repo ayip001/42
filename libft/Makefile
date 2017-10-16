@@ -6,12 +6,12 @@
 #    By: ayip <marvin@42.fr>                        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/09/18 18:19:50 by ayip              #+#    #+#              #
-#    Updated: 2017/09/21 12:36:46 by ayip             ###   ########.fr        #
+#    Updated: 2017/10/15 19:39:58 by ayip             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME=libft.a
-SRC_DIR=./src/
+SRC_DIR=./
 
 FX=\
    ft_memset\
@@ -67,18 +67,8 @@ FX=\
    ft_putchar_fd\
    ft_putstr_fd\
    ft_putendl_fd\
-   ft_putnbr_fd\
-   ft_lstnew\
-   ft_lstdelone\
-   ft_lstdel\
-   ft_lstadd\
-   ft_lstpush\
-   ft_lstiter\
-   ft_putlstelm\
-   ft_putlst\
-   ft_lstsize\
-   ft_lstmap
-OPTIONS=-I./include/
+   ft_putnbr_fd
+OPTIONS=-I./
 FLAGS=-Wall -Wextra -Werror
 
 CFILES=$(patsubst %, $(SRC_DIR)%.c, $(FX))
@@ -92,7 +82,6 @@ $(NAME):
 	@gcc $(OPTIONS) $(FLAGS) -c $(CFILES)
 	@ar rc $(NAME) $(OFILES)
 	@ranlib $(NAME)
-	@/bin/rm -f $(OFILES)
 
 clean:
 	@/bin/rm -f $(OFILES)

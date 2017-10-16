@@ -1,23 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
+/*   ft_strdel.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ayip <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/09/21 06:25:18 by ayip              #+#    #+#             */
-/*   Updated: 2017/09/21 07:16:45 by ayip             ###   ########.fr       */
+/*   Created: 2017/09/20 16:24:11 by ayip              #+#    #+#             */
+/*   Updated: 2017/09/23 22:59:23 by ayip             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdlib.h>
 
-void	ft_lstdelone(t_list **alst, void (*del)(void*, size_t))
+void	ft_strdel(char **as)
 {
-	if (alst && *alst)
+	if (as && *as)
 	{
-		del((*alst)->content, (*alst)->content_size);
-		free(*alst);
-		*alst = NULL;
+		free(*as);
+		*as = NULL;
 	}
 }
