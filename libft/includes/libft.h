@@ -6,7 +6,7 @@
 /*   By: ayip <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/18 16:02:52 by ayip              #+#    #+#             */
-/*   Updated: 2017/10/15 19:40:23 by ayip             ###   ########.fr       */
+/*   Updated: 2017/11/05 19:10:22 by ayip             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,7 @@ int					ft_toupper(int c);
 int					ft_tolower(int c);
 
 void				*ft_memalloc(size_t size);
+void				*ft_memrealloc(void *src, size_t size);
 void				ft_memdel(void **ap);
 char				*ft_strnew(size_t size);
 void				ft_strdel(char **as);
